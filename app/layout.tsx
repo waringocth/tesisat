@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
-      <body style={{ fontFamily: "'Inter', sans-serif" }}>{children}</body>
+      <body style={{ fontFamily: "'Inter', sans-serif" }} suppressHydrationWarning>{children}</body>
     </html>
   );
 }
