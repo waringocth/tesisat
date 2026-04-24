@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "[Firma Adı] Tesisat | İstanbul 7/24 Acil Tesisatçı",
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
-      <body style={{ fontFamily: "'Inter', sans-serif" }} suppressHydrationWarning>{children}</body>
+      <body style={{ fontFamily: "'Inter', sans-serif", backgroundColor: "#020818", color: "white" }} suppressHydrationWarning>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

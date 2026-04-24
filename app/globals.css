@@ -17,7 +17,9 @@
   --text-secondary: #94a3b8;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -71,7 +73,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   transform: rotate(45deg) translateX(-100%);
   transition: transform 0.6s ease;
 }
@@ -105,37 +107,112 @@ body {
 
 /* Aurora background */
 @keyframes aurora-1 {
-  0%, 100% { transform: translate(0%, 0%) scale(1); opacity: 0.5; }
-  33% { transform: translate(3%, -3%) scale(1.05); opacity: 0.7; }
-  66% { transform: translate(-2%, 2%) scale(0.95); opacity: 0.4; }
-}
-@keyframes aurora-2 {
-  0%, 100% { transform: translate(0%, 0%) scale(1); opacity: 0.4; }
-  33% { transform: translate(-4%, 2%) scale(1.08); opacity: 0.6; }
-  66% { transform: translate(3%, -3%) scale(0.92); opacity: 0.3; }
-}
-@keyframes aurora-3 {
-  0%, 100% { transform: translate(0%, 0%) scale(1); opacity: 0.3; }
-  50% { transform: translate(2%, 4%) scale(1.1); opacity: 0.5; }
-}
-@keyframes pulse-badge {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.02); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+
+  0%,
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.5;
+  }
+
+  33% {
+    transform: translate(3%, -3%) scale(1.05);
+    opacity: 0.7;
+  }
+
+  66% {
+    transform: translate(-2%, 2%) scale(0.95);
+    opacity: 0.4;
+  }
 }
 
-.aurora-1 { animation: aurora-1 12s ease-in-out infinite; }
-.aurora-2 { animation: aurora-2 15s ease-in-out infinite; }
-.aurora-3 { animation: aurora-3 18s ease-in-out infinite; }
-.float-anim { animation: float 4s ease-in-out infinite; }
-.pulse-badge { animation: pulse-badge 3s ease-in-out infinite; }
+@keyframes aurora-2 {
+
+  0%,
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.4;
+  }
+
+  33% {
+    transform: translate(-4%, 2%) scale(1.08);
+    opacity: 0.6;
+  }
+
+  66% {
+    transform: translate(3%, -3%) scale(0.92);
+    opacity: 0.3;
+  }
+}
+
+@keyframes aurora-3 {
+
+  0%,
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(2%, 4%) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse-badge {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.aurora-1 {
+  animation: aurora-1 12s ease-in-out infinite;
+}
+
+.aurora-2 {
+  animation: aurora-2 15s ease-in-out infinite;
+}
+
+.aurora-3 {
+  animation: aurora-3 18s ease-in-out infinite;
+}
+
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+.pulse-badge {
+  animation: pulse-badge 3s ease-in-out infinite;
+}
 
 /* Gradient text */
 .gradient-text {
@@ -156,7 +233,7 @@ body {
 
 /* Grid pattern */
 .grid-pattern {
-  background-image: 
+  background-image:
     linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -166,12 +243,13 @@ body {
 .stat-card-glow {
   position: relative;
 }
+
 .stat-card-glow::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: 17px;
-  background: linear-gradient(135deg, rgba(59,130,246,0.3), transparent, rgba(167,139,250,0.2));
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), transparent, rgba(167, 139, 250, 0.2));
   z-index: -1;
 }
 
@@ -204,14 +282,15 @@ body {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 100px;
   font-size: 13px;
   color: #94a3b8;
   transition: all 0.3s ease;
   cursor: default;
 }
+
 .trust-pill:hover {
   background: rgba(59, 130, 246, 0.08);
   border-color: rgba(59, 130, 246, 0.25);

@@ -47,9 +47,9 @@ const slideRight = {
 /* ─── Data ─── */
 const stats = [
   { value: "2 Saat", label: "İçinde Müdahale", icon: Clock },
-  { value: "7/24",   label: "Acil Servis",      icon: Zap },
-  { value: "2 Yıl",  label: "Garanti",           icon: ShieldCheck },
-  { value: "500+",   label: "Müşteri",           icon: Star },
+  { value: "7/24", label: "Acil Servis", icon: Zap },
+  { value: "2 Yıl", label: "Garanti", icon: ShieldCheck },
+  { value: "500+", label: "Müşteri", icon: Star },
 ];
 
 const trustItems = [
@@ -61,8 +61,8 @@ const trustItems = [
 
 const services = [
   { icon: Droplets, label: "Su Kaçağı Tespiti" },
-  { icon: Wrench,   label: "Tıkanıklık Açma" },
-  { icon: Wrench,   label: "Kombi & Petek" },
+  { icon: Wrench, label: "Tıkanıklık Açma" },
+  { icon: Wrench, label: "Kombi & Petek" },
   { icon: Droplets, label: "Pimaş & Kanalizasyon" },
 ];
 
@@ -79,62 +79,12 @@ export default function HeroSection() {
     >
       <AuroraBackground />
 
-      {/* ── NAVBAR ── */}
-      <motion.nav
-        className="relative z-20 w-full"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.55 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
-             style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "2rem", paddingRight: "2rem", width: "100%" }}>
-          <div className="flex items-center justify-between py-6">
-            {/* Logo */}
-            <div className="flex items-center gap-3 flex-shrink-0">
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(135deg,#1d4ed8,#3b82f6)",
-                  boxShadow: "0 0 20px rgba(59,130,246,0.4)",
-                }}
-              >
-                <Droplets size={20} className="text-white" />
-              </div>
-              <div className="leading-none">
-                <span className="font-bold text-white text-lg font-outfit">[Firma Adı]</span>
-                <span className="font-light text-blue-400 text-lg font-outfit"> Tesisat</span>
-              </div>
-            </div>
 
-            {/* Nav links */}
-            <div className="hidden md:flex items-center gap-8">
-              {["Hizmetler", "Referanslar", "Hakkımızda", "İletişim"].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-sm text-slate-400 hover:text-white transition-colors duration-200"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-
-            {/* Nav CTA */}
-            <a
-              href="tel:+905001234567"
-              className="flex-shrink-0 flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white btn-glow"
-            >
-              <Phone size={14} />
-              <span>Hemen Ara</span>
-            </a>
-          </div>
-        </div>
-      </motion.nav>
 
       {/* ── HERO BODY ── */}
       <div className="relative z-10 flex-1 flex items-center w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-4 pb-20"
-             style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "2rem", paddingRight: "2rem", width: "100%" }}>
+          style={{ maxWidth: "80rem", marginLeft: "auto", marginRight: "auto", paddingLeft: "2rem", paddingRight: "2rem", width: "100%" }}>
 
           {/* 2-column grid */}
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
@@ -353,9 +303,9 @@ export default function HeroSection() {
                   style={{ borderTop: "1px solid rgba(59,130,246,0.15)" }}
                 >
                   {[
-                    { label: "Tamamlanan İş",      value: "2.800+" },
-                    { label: "Memnuniyet",          value: "98%" },
-                    { label: "Yanıt Süresi",        value: "45dk" },
+                    { label: "Tamamlanan İş", value: "2.800+" },
+                    { label: "Memnuniyet", value: "98%" },
+                    { label: "Yanıt Süresi", value: "45dk" },
                   ].map(({ label, value }) => (
                     <div key={label} className="text-center">
                       <p className="font-bold text-base text-white">{value}</p>
