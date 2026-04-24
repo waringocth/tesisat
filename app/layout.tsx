@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 export const metadata: Metadata = {
   title: "[Firma Adı] Tesisat | İstanbul 7/24 Acil Tesisatçı",
   description:
@@ -20,6 +20,7 @@ export default function RootLayout({
       <body style={{ fontFamily: "'Inter', sans-serif", backgroundColor: "#020818", color: "white" }} suppressHydrationWarning>
         <Navbar />
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );
